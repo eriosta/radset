@@ -18,22 +18,12 @@ The dataset is divided into a training set and a testing set. Each set is stored
 - `report_text`: The text of the radiology report.
 - `labeled_text`: The part of the text that we want to detect.
 
-Here is an example of the data in the training set:
-
-| report_id | report_text | labeled_text |
-|-----------|-------------|--------------|
-| 1 | Patient presents with a fracture in the left radius. Recommend immediate cast. | fracture in the left radius |
-| 2 | No visible issues in the patient's chest x-ray. Heart and lungs appear normal. | No visible issues |
-| 3 | Signs of pneumonia in the right lung. Patient should be started on antibiotics. | Signs of pneumonia in the right lung |
-| 4 | Patient's MRI shows a possible tumor in the brain. Recommend further testing. | possible tumor in the brain |
-| 5 | No abnormalities detected in the patient's abdominal ultrasound. | No abnormalities detected |
-
 ## Usage
 
 To use the dataset, you can use the `RadiologyReportsDataset` class in `dataset.py`. Here is an example:
 
 ```python
-from dataset import RadiologyReportsDataset
+from radset import RadiologyReportsDataset
 
 dataset = RadiologyReportsDataset()
 train_dataset, test_dataset = dataset.load_data()
